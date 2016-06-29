@@ -15,7 +15,7 @@
 	</form>
 </body>
 <script type="text/javascript"
-	src="../Web_content/js/jquery-1.11.3.min.js"></script>
+	src="../js/jquery-1.11.3.min.js"></script>
 <script type="text/javascript">
 	/**
 	 * 绑定事件
@@ -25,12 +25,12 @@
 			$.ajax({
 				url : "validUserName",
 				type : "POST",
-				dataType: "json",
 				data : {
-					"username" : $("#username").text()
+					"username" : $("#username").val()
 				},
+				dataType: "text",
 				success : function(data) {
-					alert(data);
+					if(data == "true") alert("已经存在");
 				}
 			});
 		})

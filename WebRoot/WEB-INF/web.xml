@@ -19,28 +19,6 @@
     <servlet-name>springmvc</servlet-name>
     <url-pattern>/</url-pattern>
   </servlet-mapping>
-  
-  <servlet-mapping>
-     <servlet-name>default</servlet-name>
-     <url-pattern>*.css</url-pattern>
-</servlet-mapping>
- <!-- 静态文本请求不经过Spring -->
-<servlet-mapping>
-    <servlet-name>default</servlet-name>
-    <url-pattern>*.gif</url-pattern>
-
- </servlet-mapping>
-    
- <servlet-mapping>
-     <servlet-name>default</servlet-name>
-     <url-pattern>*.jpg</url-pattern>
- </servlet-mapping>
-    
- <servlet-mapping>
-     <servlet-name>default</servlet-name>
-     <url-pattern>*.js</url-pattern>
- </servlet-mapping>
- 
   <filter>
     <filter-name>encodingFilter</filter-name>
     <filter-class>

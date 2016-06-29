@@ -26,9 +26,13 @@ public class UserController {
 
 	@RequestMapping("/dologin")
 	public String goAddemp() {
+		return "index";
+	}
+	@RequestMapping("/gologin")
+	public String  gologin(){
 		return "login";
 	}
-
+	
 	@RequestMapping("/check")
 	public String gocheck(User user) {
 
@@ -45,8 +49,10 @@ public class UserController {
 	@RequestMapping("/signUp")
 	public String signUp(String username, String password) {
 		User user = new User();
+		user.setUserName(username);
+		user.setUserPass(password);
 		userService.addUser(user);
-		return "main";
+		return "welcome";
 	}
 
 	@RequestMapping(value = "validUserName", method = RequestMethod.POST)
